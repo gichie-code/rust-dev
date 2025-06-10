@@ -1,0 +1,7 @@
+services:
+  rust-dev:
+    build: .
+    volumes:
+      - ./app:/app
+    working_dir: /app
+    command: cargo run
