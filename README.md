@@ -22,7 +22,7 @@ rust-dev/
 
 ```bash
 cd app
-docker compose run --rm rust-dev cargo new . --bin
+docker compose run --rm rust-dev cargo init --bin
 ```
 
 ## 🛠️ コンパイルと実行
