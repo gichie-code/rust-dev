@@ -16,24 +16,19 @@ rust-dev/
         └── main.rs
 ```
 
-## 🚀 初期セットアップ
-
-以下のコマンドでプロジェクトを初期化できます（初回のみ）：
+## 🛠️ ビルド
 
 ```bash
-cd app
-docker compose run --rm rust-dev cargo init --bin
+docker compose run --rm rust-dev cargo build
 ```
 
-## 🛠️ コンパイルと実行
-
-Rustアプリをビルドして実行：
+## ▶️ 実行
 
 ```bash
 docker compose run --rm rust-dev cargo run
 ```
 
-## 🧪 テストの実行
+## 🧪 テスト
 
 ```bash
 docker compose run --rm rust-dev cargo test
@@ -46,7 +41,7 @@ docker compose run --rm rust-dev cargo add <crate-name>
 ```
 > cargo-edit がインストールされている場合。
 
-## 🧹 クリーンアップ
+## 🧹 クリーン
 
 ```bash
 docker compose run --rm rust-dev cargo clean
