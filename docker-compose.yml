@@ -1,7 +1,6 @@
 services:
   rust-dev:
-    build: .
-    volumes:
-      - ./app:/app
+    build:
+      context: .
+      dockerfile: Dockerfile
     working_dir: /app
-    command: cargo run

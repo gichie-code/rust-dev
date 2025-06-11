@@ -18,34 +18,39 @@ rust-dev/
 
 ## 🚀 初期セットアップ
 
-`app` ディレクトリはすでに Cargo プロジェクトとして初期化されています。  
-もし再初期化が必要な場合は以下を実行してください：
+以下のコマンドでプロジェクトを初期化できます（初回のみ）：
 
 ```bash
-docker compose run --rm rust-dev cargo init --bin app
+cd app
+docker compose run --rm rust-dev cargo new . --bin
 ```
 
-## 🛠️ プログラムのビルドと実行
+## 🛠️ コンパイルと実行
 
-Rust プログラムのビルドと実行は以下のコマンドで行います：
+Rustアプリをビルドして実行：
 
 ```bash
-docker compose run --rm rust-dev cargo run --manifest-path app/Cargo.toml
+docker compose run --rm rust-dev cargo run
 ```
 
 ## 🧪 テストの実行
 
 ```bash
-docker compose run --rm rust-dev cargo test --manifest-path app/Cargo.toml
+docker compose run --rm rust-dev cargo test
 ```
 
-## 📦 依存クレートの追加
+## 📦 依存関係の追加
 
 ```bash
-docker compose run --rm rust-dev cargo add [crate_name] --manifest-path app/Cargo.toml
+docker compose run --rm rust-dev cargo add <crate-name>
 ```
+> cargo-edit がインストールされている場合。
 
 ## 🧹 クリーンアップ
+
+```bash
+docker compose run --rm rust-dev cargo clean
+```
 
 不要なコンテナやイメージの削除は以下で行います：
 
